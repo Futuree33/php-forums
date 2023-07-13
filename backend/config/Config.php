@@ -11,12 +11,26 @@ final class Config
 
     public const Categories = [
         "Exploiting",
+        "Programming"
     ];
 
     public const Forums = [
         "Exploiting" => [
             [
+                "id" => 1,
                 "title" => "Roblox",
+                "description" => "great description for this forum",
+            ],
+            [
+                "id" => 2,
+                "title" => "Roblox 2",
+                "description" => "great description for this forum",
+            ],
+        ],
+        "Programming" => [
+            [
+                "id" => 3,
+                "title" => "PHP",
                 "description" => "great description for this forum",
             ],
         ],
@@ -35,7 +49,5 @@ final class Config
 
         if ($rules["require_login"] === true)
         {}
-
-
     }
 }

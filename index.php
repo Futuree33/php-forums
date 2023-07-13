@@ -54,10 +54,9 @@ require "./backend/autoload.php";
                                 <h4 style="display: flex; gap: 20px;" class="flex items-center">
                                     <i style="color: var(--accent); font-size: 2rem;" class="fa-regular fa-circle-dot"></i>
                                     <div>
-                                        <div>
+                                        <a href="./forum.php?id=<?php echo $forum["id"] ?>">
                                             <span style="font-size: 1rem"><?php echo htmlentities($forum["title"]) ?></span>
-                                        </div>
-
+                                        </a>
                                         <?php if (isset($forum["description"])): ?>
                                             <p style="font-size: .8rem; font-weight: normal; color: #a0a0a0;"><?php echo htmlentities($forum["description"]) ?></p>
                                         <?php endif; ?>

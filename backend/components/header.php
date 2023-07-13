@@ -1,10 +1,12 @@
 <header class="header" style="position:relative;">
     <div class="flex justify-center">
-        <img src="https://cdn.discordapp.com/attachments/954913304944451645/1128153871580143646/logo.png">
+        <a href="./">
+            <img src="https://cdn.discordapp.com/attachments/954913304944451645/1128153871580143646/logo.png">
+        </a>
     </div>
     <div class="header-nav">
         <div class="flex items-center">
-            <a class="header-nav-link" href="">
+            <a class="header-nav-link" href="./">
                 <i class="fa-solid fa-house"></i>
                 Home
             </a>
