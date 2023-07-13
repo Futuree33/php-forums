@@ -1,6 +1,5 @@
 <?php
 require "./backend/autoload.php";
-
 ?>
 
 <!doctype html>

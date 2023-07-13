@@ -2,24 +2,27 @@
 
 namespace database;
 
-use JetBrains\PhpStorm\NoReturn;
-
 final class Db
 {
+
     private static \mysqli $mysqli;
 
-    public function __construct(array $dbInfo)
+    public function __construct(private readonly array $DbConfig)
     {
-        try
-        {
-            self::$mysqli = @new \mysqli(...$dbInfo);
-        }
-        catch (\mysqli_sql_exception $exception)
-        {
-            error_log($exception->getMessage());
-            die("Internal Server Error");
-        }
+        $this->Connect();
     }
+
+    private function Connect() : void
+    {
+        mysqli_report(MYSQLI_REPORT_OFF);
+        $mysqli = @new \mysqli(...$this->DbConfig);
+
+        if ($mysqli->connect_error)
+            die("Internal Server Error");
+
+        self::$mysqli = $mysqli;
+    }
+
 
     public static function Query(string $query, array $params = []) : \mysqli_result | false
     {

@@ -1,7 +1,14 @@
 <?php
+
 namespace Config;
+
 final class Config
 {
+
+    public const GlobalRules = [
+        "require_login" => true
+    ];
+
     public const Categories = [
         "Exploiting",
     ];
@@ -21,4 +28,14 @@ final class Config
         "",
         "silver.forum"
     ];
+
+    public static function EnforceRules() : void
+    {
+        $rules = self::GlobalRules;
+
+        if ($rules["require_login"] === true)
+        {}
+
+
+    }
 }
