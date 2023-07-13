@@ -7,6 +7,4 @@ spl_autoload_register(
     fn($className) => require $className . ".php"
 );
 
-require "config.php";
-
-new \database\Db(dbConfig);
+new \database\Db(Config\Config::DbConfig);

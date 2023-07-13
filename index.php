@@ -1,5 +1,6 @@
 <?php
 require "./backend/autoload.php";
+
 ?>
 
 <!doctype html>
@@ -18,7 +19,7 @@ require "./backend/autoload.php";
 
     <div style="margin-top: 20px;" class="padding-wrapper">
         <div class="dark-section" style="display: grid; gap: 15px;">
-            <?php foreach (categories as $category): ?>
+            <?php foreach (Config\Config::Categories as $category): ?>
                 <div style="padding: 5px;">
                     <div style="display: flex; align-items: center; justify-content: space-between; background-color: var(--accent); border-radius: 6px 6px 0px 0px; padding: 12px 15px;">
                         <h1 style="font-size: 1rem">
@@ -49,8 +50,8 @@ require "./backend/autoload.php";
 
                     <div style="display: grid; background-color: #202020; border-radius: 0px 0px 6px 6px;">
                         <?php $i = 0; ?>
-                        <?php foreach (forums[$category] as $forum): ?>
-                            <div style="display: grid; padding: 15px; <?php echo ($i++ < count(forums[$category]) - 1) ?  "border-bottom: 1.5px solid #2a2a2a;" : "" ?> align-items: center; grid-template-columns: 5fr 1fr 1fr 1fr;">
+                        <?php foreach (\Config\Config::Forums[$category] as $forum): ?>
+                            <div style="display: grid; padding: 15px; <?php echo ($i++ < count(\Config\Config::Forums[$category]) - 1) ?  "border-bottom: 1.5px solid #2a2a2a;" : "" ?> align-items: center; grid-template-columns: 5fr 1fr 1fr 1fr;">
                                 <h4 style="display: flex; gap: 20px;" class="flex items-center">
                                     <i style="color: var(--accent); font-size: 2rem;" class="fa-regular fa-circle-dot"></i>
                                     <div>
