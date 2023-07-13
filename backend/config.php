@@ -1,7 +1,6 @@
 <?php
 const categories = [
     "Exploiting",
-
 ];
 
 const forums = [
